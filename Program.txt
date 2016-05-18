@@ -1,9 +1,9 @@
 ﻿/* 
  *  Henry Juhanson
  *  143080IASB
- *  
  *  Arvutite aritmeetika ja loogika
  *    Boothi algoritmiga korrutamine
+ *    Leitav ka internetist : y009.eu/program.cs
 */  
 using System;
 using System.Collections;
