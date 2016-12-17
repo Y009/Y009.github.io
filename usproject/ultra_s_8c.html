@@ -75,8 +75,8 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;driverlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="ultra_s_8h_source.html">ultraS.h</a>&quot;</code><br />
-<code>#include &quot;../MCU/counter.h&quot;</code><br />
-<code>#include &quot;../MCU/timer.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="counter_8h_source.html">../MCU/counter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer_8h_source.html">../MCU/timer.h</a>&quot;</code><br />
 <code>#include &quot;stdio.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="gpio_8h_source.html">gpio.h</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -130,13 +130,16 @@ Variables</h2></td></tr>
 <tr class="separator:a71ff771a4087c8674a0fa6720182d23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c9f4eb624319b65b1fc6f64db7d410"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="ultra_s_8h.html#a015eb90e0de9f16e87bd149d4b9ce959">status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ultra_s_8c.html#a25c9f4eb624319b65b1fc6f64db7d410">usStatus</a> = <a class="el" href="ultra_s_8h.html#a015eb90e0de9f16e87bd149d4b9ce959a4444eecc516e45f891e67e9278efd311">US_IDLE</a></td></tr>
 <tr class="separator:a25c9f4eb624319b65b1fc6f64db7d410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad28bb54ae6e9031bd6205e4069042cc2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7b">dataStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ultra_s_8c.html#ad28bb54ae6e9031bd6205e4069042cc2">usDataStatus</a> = <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7bae27f17d8a7ef52a5d6d5b8c4e562d453">US_DATA_FALSE</a></td></tr>
+<tr class="memitem:ad28bb54ae6e9031bd6205e4069042cc2"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7b">dataStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ultra_s_8c.html#ad28bb54ae6e9031bd6205e4069042cc2">usDataStatus</a> = <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7ba50827340ffe4c961347eb0c3e601f3c4">US_DATA_READ</a></td></tr>
 <tr class="separator:ad28bb54ae6e9031bd6205e4069042cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Documentation for the ultrasonic module. </p>
-<p>Describes the workings of the ultrasonic module. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<p>Describes the workings of the ultrasonic module.</p>
+<div class="image">
+<img src="usFSM.png" alt="usFSM.png"/>
+</div>
+  </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0212ca8fac649015507d58329b4e2cfc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0212ca8fac649015507d58329b4e2cfc">&sect;&nbsp;</a></span>CMCONST</h2>
 
@@ -212,7 +215,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reset start and end time to 0 to insure proper results. </p>
+<p>Reset start and end time to 0 to insure proper results. </p><dl class="section attention"><dt>Attention</dt><dd>Private function. </dd></dl>
 
 </div>
 </div>
@@ -287,7 +290,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getters, Setters Get ultrasonic modules state.</p>
+<p>Get ultrasonic modules state.</p>
 <dl class="section return"><dt>Returns</dt><dd>usStatus </dd></dl>
 
 </div>
@@ -326,8 +329,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Getters, Setters Interrupt vector for Port 1.</p>
-<p>Is triggered when the hardware ultrasonic module sends back an echo signal. The rising edge of the echo signal is saved as the starting time and the falling edge as the ending time. </p>
+<p>Interrupt vector for Port 1.</p>
+<p>Is triggered when the hardware ultrasonic module sends back an echo signal. <br />
+ The rising edge of the echo signal is saved as the starting time and the falling edge as the ending time. </p>
 
 </div>
 </div>
@@ -346,7 +350,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Calculates measured distance.</p>
-<p>Measured distance is calculated as: end time - start time, which is then divided by 58 - constant to get the distance in centimeters. End time is the difference of the end and start time multiplier times the counter size added to the measured end time. Start time is just the measured start time. </p><dl class="section attention"><dt>Attention</dt><dd>Only when rollover happens! </dd>
+<p>Measured distance is calculated as: end time - start time, which is then divided by 58 - constant to get the distance in centimeters. <br />
+ End time is the difference of the end and start time multiplier times the counter size added to the measured end time. Start time is just the measured start time. </p><dl class="section attention"><dt>Attention</dt><dd>Only when rollover happens! </dd>
 <dd>
 Adds the entire counter size to endTime to compensate for potential rollover. </dd></dl>
 
@@ -367,7 +372,8 @@ Adds the entire counter size to endTime to compensate for potential rollover. </
       </table>
 </div><div class="memdoc">
 <p>Send signal to the physical ultrasonic module.</p>
-<p>Set's appropriate FSM state. Send's a high signal for required time - 10uS. Delays system to not send multiple signals at the same time. </p>
+<p>Set's appropriate FSM state. Send's a high signal for required time - 10uS. <br />
+ Delays system to not send multiple signals at the same time. </p>
 
 </div>
 </div>
@@ -505,11 +511,11 @@ Adds the entire counter size to endTime to compensate for potential rollover. </
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7b">dataStatus</a> usDataStatus = <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7bae27f17d8a7ef52a5d6d5b8c4e562d453">US_DATA_FALSE</a></td>
+          <td class="memname">enum <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7b">dataStatus</a> usDataStatus = <a class="el" href="ultra_s_8h.html#a5af22166e4d97bfcc7589baec25bec7ba50827340ffe4c961347eb0c3e601f3c4">US_DATA_READ</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set finite state machine to start in false state to insure no false information. </p>
+<p>Set finite state machine to start in read state to insure no false information. </p>
 
 </div>
 </div>
