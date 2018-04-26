@@ -1,0 +1,153 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Utopianormal.ttf);	
+}
+@font-face
+{
+	font-family: SecondFont;
+	src: url(fonts/Nexa_Bold.otf);
+}
+body
+{
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	padding-top:2%;
+	/*font-family:	"Lobster",cursive;
+	font-size:22px;
+	color:white;*/	
+}
+h1.name
+{
+	margin-top:-3px;
+/*Everything that designs the word foodster */	
+	font-family:"Lobster",sans-serif;	
+	font-weight:bold;
+	color:#FA8628;
+	font-size:70px;
+	text-align:center;	
+	letter-spacing:-1.0px;
+	padding:0;
+	margin-bottom:0;
+}
+nav
+{	
+	display:center;
+	margin-top:0px;
+	padding:0;
+	text-align:center;
+	border-top-style: solid;
+	border-color:lightgrey;
+	padding-top:13px;
+	border-width:1px;
+	/*To align navbar to center and to regulate the line length*/
+	width:35%;
+	margin-left:33%;
+    
+}
+nav a
+{
+
+	margin-top:2px;
+	font-family: myFirstFont,serif;
+	letter-spacing:0.2px;	
+	font-size:15px;
+	text-decoration:none;
+	display:inline;	
+	text-transform: uppercase;
+	color:#333333;
+	font-weight: 700;
+	padding-left:5%;	
+}
+nav a:hover
+{
+	text-decoration:underline;
+}
+section
+{		
+	margin-top:13px;
+	background-image: url(img/3.jpg);
+	background-position:50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;	
+	height:480px;
+	
+}
+#search_box_area
+{	
+	padding-left:3%;
+	margin: auto;
+    width: 50%;	
+	text-align:center;
+	height:100%;
+	
+}
+p.reijo
+{
+	font-family:SecondFont;
+	font-weight:700;
+	color:#FFFFFF;
+	font-size:px;
+}
+img{
+	
+	border: 10px solid transparent;
+	border-color: #FFFFFF;
+
+}
+h1.search
+{
+	margin:0;
+	padding-top:2%;
+	padding-bottom:15px;
+	font-family:SecondFont;	
+	font-weight:700;
+	color:#FFFFFF;
+	font-size:62px;
+	letter-spacing:-1.5px;	
+}
+.box
+{
+	margin-top:2%;
+	margin-left:4%;
+	height:50px;
+	width:57%;
+	opacity:0.65;
+	font-size:25px;
+	font-family:SecondFont;	
+	font-weight:700;
+	border:none;
+	padding:0;
+	display:inline;
+	
+	cal-align: bottom;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
+
+
+.search_button
+{
+	height:50px;
+	width:80px;
+	margin-left:-4px;
+	padding:0;
+	vertical-align: bottom;
+	border:0px;
+	text-transform: uppercase;
+	font-family:SecondFont;	
+	font-weight:700;
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#d78e3d;	
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+.search_button:hover
+{
+    background-color: #4CAF50; /* Green */
+    color: white;
+	cursor: pointer;
+}

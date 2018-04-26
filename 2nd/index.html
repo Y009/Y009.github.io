@@ -1,50 +1,63 @@
+
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PotatoBox2.0 - the future of growing</title>
+        <meta name="description" content="PotatoBox2.0 - the future of growing" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+        <!--Bootstrap 4-->
+        <link rel="stylesheet" href="http://potatobox.veeb.eu/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!--icons-->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    </head>
+    <body>
+        <!--header-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="ion-grid icon-sm"></span>
+            </button>
+            <a class="navbar-brand hero-heading" href="#">Vastasmeeskond</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="../">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="../2nd">Henry</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="../3rd">Reijo</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="../4th">Karl</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="../5th">Jurgen</a>
+                    </li>
+                    <!--li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>-->
+                </ul>
+            </div>
+        </nav>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Greatest page ever</title>
-    <link rel="stylesheet" type="text/css" href="../main.css">
-
-</head>
-
-<body>
-
-<div class="nav">
-    <ul class="menu">
-      <li>
-        <div id="home">
-          <a href="../"> <img class="roundrect" src="http://i.imgur.com/RB8YOzw.png" height="85" width="85" alt="Home">
-          <p class="imgD">Home</p>
-          </a>
-        </div>
-      </li>
-
-      <li>
-        <div id="2nd">
-          <a href=""> <img class="roundrect" src="http://i.imgur.com/EKWaTxj.png" height="85" width="85" alt="2nd page">
-          <p class="imgD">2nd p</p>
-          </a>
-        </div>
-      </li>
-
-      <li>
-        <div id="3rd">
-          <a href="../3rd"> <img class="roundrect" src="http://i.imgur.com/oOyw7a8.jpg?1" height="85" width="85" alt="3rd page">
-          <p class="imgD">3rd p</p>
-          </a>
-        </div>
-      </li>
-
-      <li>
-        <div id="4th">
-          <a href="../4th"> <img class="roundrect" src="http://i.imgur.com/PPAUUCL.jpg" height="85" width="85" alt="4th page">
-          <p class="imgD">4th p</p>
-          </a>
-        </div>
-      </li>
-    </ul>
-</div>
-
-<p><br>2nd page</p>
-
-</body>
+        <!--main section-->
+        <section class="bg-texture hero" id="main">
+            <div class="container">
+                <div class="row d-md-flex brand">
+                    <div class="col-md-6 hidden-sm-down wow fadeIn">
+                        <img class="img-fluid mx-auto d-block" src="../henryPIC.jpg"/>
+                    </div>
+                    <div class="col-md-6 col-sm-12 text-white wow fadeIn">
+                        <h2 class="pt-4">Henry Juhanson <b class="text-primary-light"> studying  at </b> TTU</h2>
+                        <p class="mt-5">
+                            Born 19th July 1995. From Pärnu lives in Tallinn
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+</html>
