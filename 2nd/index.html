@@ -1,86 +1,175 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Henry</title>
-        <meta name="description" content="Henry - The great big potato" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
 
-        <!--Bootstrap 4-->
-        <link rel="stylesheet" href="../2nd/bootstrap.min.css">
-       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
-        <!--icons-->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-    </head>
-    <body>
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-color:#e91e63;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background: transparent radial-gradient(circle farthest-side at right bottom,#ec407a 5%,#e91e63 25%,#d81b60 80%,#c2185b 98%) repeat scroll 0 0;
+   
+    min-height: 100%;
+}
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Vastasmeeskond</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="./">Home</a></li>
-        <li><a href="./2nd">Henry</a></li>
-        <li><a href="./3rd">Reijo</a></li>
-        <li><a href="./4th">Karl</a></li>
-        <li><a href="./5th">Jürgen</a></li>
-      </ul>
-    </div>
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background: transparent radial-gradient(circle farthest-side at right bottom,#ec407a 5%,#e91e63 25%,#d81b60 80%,#c2185b 98%) repeat scroll 0 0;
+   
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background: transparent radial-gradient(circle farthest-side at right bottom,#ec407a 5%,#e91e63 25%,#d81b60 80%,#c2185b 98%) repeat scroll 0 0;
+    
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="./" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <a href="../2nd" class="w3-bar-item w3-button w3-hide-small">Henry</a>
+    <a href="../3rd" class="w3-bar-item w3-button w3-hide-small">Reijo</a>
+    <a href="../4th" class="w3-bar-item w3-button w3-hide-small">Karl</a>
+    <a href="../5th" class="w3-bar-item w3-button w3-hide-small">Jürgen</a>
   </div>
-</nav>
-        <!--header-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="ion-grid icon-sm"></span>
-            </button>
-            <a class="navbar-brand hero-heading" href="#">Vastasmeeskond</a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="../">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="../2nd">Henry</a>
-                    </li>
-                    <li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="../3rd">Reijo</a>
-                    </li>
-                    <li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="../4th">Karl</a>
-                    </li>
-                    <li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="../5th">Jurgen</a>
-                    </li>
-                    <!--li class="nav-item mr-3">
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
-                    </li>-->
-                </ul>
-            </div>
-        </nav>
 
-        <!--main section-->
-        <section class="bg-texture hero" id="main">
-            <div class="container">
-                <div class="row d-md-flex brand">
-                    <div class="col-md-6 hidden-sm-down wow fadeIn">
-                        <img class="img-fluid mx-auto d-block" src="https://imgur.com/WJDJpl4.png"/>
-                    </div>
-                    <div class="col-md-6 col-sm-12 text-white wow fadeIn">
-                        <h2 class="pt-4">Henry Juhanson <b class="text-primary-light"> studying  at </b> TTU</h2>
-                        <p class="mt-5">
-                            Born 19th July 1995. From Pärnu lives in Tallinn
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="./" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+    <a href="../2nd" class="w3-bar-item w3-button" onclick="toggleFunction()">Henry</a>
+    <a href="../3rd" class="w3-bar-item w3-button" onclick="toggleFunction()">Reijo</a>
+    <a href="../4th" class="w3-bar-item w3-button" onclick="toggleFunction()">Karl</a>
+    <a href="../5th" class="w3-bar-item w3-button" onclick="toggleFunction()">Jürgen</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Henry Juhanson</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">Date of birth</h3>
+  <p class="w3-center"><em>19.07.1995</em></p>
+  <h3 class="w3-center">Address</h3>
+  <p class="w3-center"><em>From Pärnu, lives in Tallinn</em></p>
+  <h3 class="w3-center">Fun Fact</h3>
+  <p class="w3-center"><em>I like potatoes</em></p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="../henryPIC.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Being a Potato</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>CSGO</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>PUBG</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey">To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  </div>
+  
+</footer>
+ 
+
+<script>
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+
+</body>
 </html>

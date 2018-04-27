@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html>
-<title>KARL</title>
+<title>Karl</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Playfair Display";
-    letter-spacing: 5px;
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Karma", sans-serif;
+  
+}
+.w3-bar-block .w3-bar-item {
+  padding:20px;
+
 }
 </style>
 <body>
 
-<!-- Navbar (sit on top) -->
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="../" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="../2nd" onclick="w3_close()" class="w3-bar-item w3-button">Henry</a>
+  <a href="../3rd" onclick="w3_close()" class="w3-bar-item w3-button">Reijo</a>
+  <a href="../4th" onclick="w3_close()" class="w3-bar-item w3-button">Karl</a>
+  <a href="../5th" onclick="w3_close()" class="w3-bar-item w3-button">Jürgen</a>
+</nav>
+
+<!-- Top menu -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">VASTASMEESKOND</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="../" class="w3-bar-item w3-button">Home</a>
-      <a href="../2nd" class="w3-bar-item w3-button">Henry</a>
-      <a href="../3rd" class="w3-bar-item w3-button">Reijo</a>
-      <a href="../4th" class="w3-bar-item w3-button">Karl</a>
-      <a href="../5th" class="w3-bar-item w3-button">Jürgen</a>
-    </div>
+  <div class="w3-white w3-xlarge" style="margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" style="background-color: #FFDC00;"onclick="w3_open()">☰</div>
+    
   </div>
 </div>
+  
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<div class="w3-container w3-padding-32 w3-center">  
+    <div class="w3-padding-32">
+      <h3><b>The perfect Marvin, always grumpy!</b></h3>
+      <h6><i>Nothings ever good for Karl</i></h6>
+      <img src="https://i.imgur.com/OWRpkP1.png" alt="Karl" style="width:80%">
+      <h3>Born 23.02.1995</h3>
+      <p>This man is a prime example of grumpy.</p>
+      <h3>Living in Tallinn.</h3>
+      <p>But is from just outside of it, a small drive towards east.</p>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Le Catering</h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="https://imgur.com/OWRpkP1.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Karl</h1><br>
-      <h5 class="w3-center">Born 23.02.1995</h5>
-      <h5 class="w3-center">Lives in Tallinn, TTU </h5><br>
-      <h5 class="w3-center">TTU IASM</h5>
-      
     </div>
   </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  
 
-  <!-- Contact Section -->
+</div>
+<!-- !PAGE CONTENT! -->
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
  
-<!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>VASTASMEESKOND</a></p>
-</footer>
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 
 </body>
 </html>
