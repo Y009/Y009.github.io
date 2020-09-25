@@ -73,8 +73,8 @@ var projects_data = {
           desc : "Sega-pundar LED maatriksitest ja juhtmetest. Nurk 2."
         },
         {
-          src : "https://lh3.googleusercontent.com/proxy/cLAGgCP7-DIXF_jiBdjvmAZUhgvkNqr8ji8RXbQ9BcSAzKVUpwp-X8NagAa5i6PsbQ0EOZn91I24-9LlIS_PIVME6f3BHtr62iQxJIGAaDr5aZdB",
-          desc : "Inspiratisoon originaal mängust"
+          src : "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Breakout2600.svg/1280px-Breakout2600.svg.png",
+          desc : "Inspiratisoon originaal mängust. By Source, Fair use, https://en.wikipedia.org/w/index.php?curid=52132637"
         }
                 ]
 
@@ -86,12 +86,8 @@ var projects_data = {
       previewdesc : "2. koha pilt",
       images : [
         {
-          src : "https://i.imgur.com/Ai7OBlo.jpg",
-          desc : "Sega-pundar LED maatriksitest ja juhtmetest. Nurk 2."
-        },
-        {
-          src : "https://lh3.googleusercontent.com/proxy/cLAGgCP7-DIXF_jiBdjvmAZUhgvkNqr8ji8RXbQ9BcSAzKVUpwp-X8NagAa5i6PsbQ0EOZn91I24-9LlIS_PIVME6f3BHtr62iQxJIGAaDr5aZdB",
-          desc : "Inspiratisoon originaal mängust"
+          src : "../assets/img/enginaator_pic.jpg",
+          desc : "2. koht 2019. Vastasmeeskond"
         }
                 ]
     },
@@ -107,6 +103,10 @@ var projects_data = {
         }
                 ],
       images : [
+        {
+          src : "https://i.imgur.com/088wqFB.jpg",
+          desc : "Lõputöö, named Wall-e"
+        },
         {
           src : "https://i.imgur.com/houD6nb.png",
           desc : "Komponentide üldine ühendamine."
