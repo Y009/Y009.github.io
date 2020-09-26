@@ -4702,7 +4702,8 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #1f2d41 !important; }
+  /* background-color: #1f2d41 !important; } */
+  background: linear-gradient(135deg, #080c11 0%, #293c56 100%);}
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,

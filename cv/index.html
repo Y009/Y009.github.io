@@ -10,11 +10,13 @@
 
   <title>Henry</title>
 
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- <link href="css/headings.css" rel="stylesheet"> -->
-  <!-- <link href="css/body.css" rel="stylesheet"> -->
+  <!-- <link href="css/headings.css" rel="stylesheet">
+  <link href="css/body.css" rel="stylesheet"> -->
   <link href="../css/styles.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
@@ -51,6 +53,16 @@
     </div>
   </nav>
 
+  <div class="container-fluid" style="background: linear-gradient(0deg, #080c11 0%, #293c56 100%)">
+<!-- style="background: linear-gradient(45deg, #080c11 0%, #293c56 100%) -->
+  <!-- <div class="row text-white"> -->
+  <br>
+  <div id="skills-content">
+        <!--handlebars stuff gets put in here-->
+  </div>
+  <br>
+  </div>
+
   <div class="container-fluid bg-primary">
     <br>
   	<div id="content">
@@ -63,8 +75,66 @@
     </div>
   </div>
 
+  <script id="skills-template" type="text/x-handlebars-template">
+    <h1 class="text-muted">Oskused</h1>
+    <br>
+    <div class="row justify-content-end text-light">
+      <div class="col-lg-2 col-sm-4">
+        <h4>Varia:</h4>
+        {{#each other_skills}}
+          <ul class="list-group">
+            <ul>
+              {{name}}
+            </ul>
+          </ul>
+        {{/each}}
+        <br>
+        <br>
+      </div>
+
+      <div class=" col-lg-4">
+      </div>
+
+      <div class="col-lg-2 col-sm-4">
+        <h4>Arendus:</h4>
+        {{#each soft_skills}}
+          <ul class="list-group">
+            <ul>
+              {{name}}
+            </ul>
+          </ul>
+        {{/each}}
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <br>
+        <br>
+        <h4>Programmid:</h4>
+        {{#each program_skills}}
+          <ul class="list-group">
+            <ul>
+              {{name}}
+            </ul>
+          </ul>
+        {{/each}}
+        <br>
+        <br>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <h4>Sardsüsteemid:</h4>
+        {{#each emb_skills}}
+          <ul class="list-group">
+            <ul>
+              {{name}}
+            </ul>
+          </ul>
+        {{/each}}
+      </div>
+    </div>
+  </script>
+
   <script id="category-template" type="text/x-handlebars-template">
-    <div class="row text-white">
+    <h1 class="text-muted pb-5">Mõningad tegemised</h1>
+    <div class="row text-light">
       {{#each projects}}
         <div class="col-xl-3 col-lg-6 col-sm-12">
         <h2>
@@ -126,7 +196,23 @@
     </div>
   </script>
 
+  <footer class="footer text-center">
+      <div class="container">
+          <div class="row justify-content-md-center">
+              <div class="col-lg-4 mb-5 mb-lg-0  text-black-50">
+                  <h4 class="mb-4">SOCIAL</h4>
+                  <a class="btn btn-outline-dark btn-social mx-1" href="https://github.com/Y009"><i class="fab fa-fw fa-github"></i></a>
+                  <a class="btn btn-outline-dark btn-social mx-1" href="https://www.linkedin.com/in/henry-juhanson-27a324155"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                  <a class="btn btn-outline-dark btn-social mx-1" href="mailto:henry.juhanson@gmail.com"><i class="fab fa fa-envelope"></i></a>
+              </div>
 
+          </div>
+      </div>
+  </footer>
+  <!-- Copyright Section-->
+  <section class="copyright py-1 text-center text-dark">
+      <div class="container"><small class="pre-wrap">© 2020 </small></div>
+  </section>
 
   <!-- Bootstrap core JavaScript -->
   <script src="../vendor/jquery/jquery.slim.min.js"></script>

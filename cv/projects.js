@@ -1,4 +1,134 @@
-// this file contains the data we need for the animal viewer
+
+var skill_data = {
+  soft_skills : [
+    {
+      name : "C",
+      level : "7"
+    },
+    {
+      name : "Python",
+      level : "5"
+    },
+    {
+      name : "C#",
+      level : "5"
+    },
+    {
+      name : "HTML",
+      level : "5"
+    },
+    {
+      name : "CSS",
+      level : "5"
+    },
+    {
+      name : "JavaScript",
+      level : "4"
+    },
+    {
+      name : "Bootstrap",
+      level : "4"
+    },
+    {
+      name : "Handlebars",
+      level : "5"
+    },
+    {
+      name : "SQL",
+      level : "4"
+    },
+    {
+      name : "jQuery",
+      level : "3"
+    },
+    {
+      name : "UML",
+      level : "8"
+    }
+  ],
+
+  emb_skills : [
+    {
+      name : "NFC",
+      level : ""
+    },
+    {
+      name : "PWM",
+      level : ""
+    },
+    {
+      name : "WiFi",
+      level : ""
+    },
+    {
+      name : "I2C",
+      level : ""
+    },
+    {
+      name : "U(S)ART",
+      level : ""
+    },
+    {
+      name : "SPI",
+      level : ""
+    },
+    {
+      name : "FreeRTOS",
+      level : ""
+    },
+    {
+      name : "Power",
+      level : ""
+    },
+    {
+      name : "Ultrasound",
+      level : ""
+    },
+    {
+      name : "LED",
+      level : ""
+    }
+  ],
+
+  program_skills : [
+    {
+      name : "MS Office",
+      level : ""
+    },
+    {
+      name : "Atollic",
+      level : ""
+    },
+    {
+      name : "STM CubeMX",
+      level : ""
+    },
+    {
+      name : "LogicPort",
+      level : ""
+    },
+    {
+      name : "Git",
+      level : ""
+    },
+    {
+      name : "Jira",
+      level : ""
+    }
+  ],
+
+  other_skills : [
+    {
+      name : "Inglise keel",
+      level : ""
+    },
+    {
+      name : "Load - B BE C CE",
+      level : ""
+    }
+  ]
+
+};
 
 var projects_data = {
   projects:[
@@ -116,7 +246,5 @@ var projects_data = {
           desc : "Robot navigeeritaval alal."
         }
                 ]
-
     }
-
 ]};

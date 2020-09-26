@@ -1,4 +1,4 @@
-var projects_template;
+var projects_template, skills_temp;
 
 // a helper function that instantiates a template
 // and displays the results in the content div
@@ -13,8 +13,16 @@ function showTemplate(template, data){
 // in here
 $(document).ready(function(){
 
-	var source   = $("#category-template").html();
+	var source = $("#category-template").html();
 	projects_template = Handlebars.compile(source);
+
+	source = $("#skills-template").html();
+	console.log(source);
+	skills_temp = Handlebars.compile(source);
+	var html = skills_temp(skill_data);
+	console.log(html);
+	$('#skills-content').html(html);
+
 
 	source   = $("#modal-template").html();
 	var modal_template = Handlebars.compile(source);
@@ -22,7 +30,7 @@ $(document).ready(function(){
 	showTemplate(projects_template, projects_data);
 
 	function displayModal(event){
-		 console.log("clicked image");
+
 		 // get the index (position in the array)
 		 // of the photo we clicked on
 		 // "this" is the element that was clicked on
@@ -33,9 +41,7 @@ $(document).ready(function(){
 
 		 // get the image out of the array using the image
 		 // number and render it using the modal template
-		 console.log(imageNumber);
-		 console.log(projects_data.projects[imageNumber].images[0]);
-		 var html    = modal_template(projects_data.projects[imageNumber]);
+		 html = modal_template(projects_data.projects[imageNumber]);
 		 // put the modal template in the DOM
 		 $('#modal-container').html(html);
 		 //
